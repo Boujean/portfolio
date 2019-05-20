@@ -1,0 +1,413 @@
+/*Main CSS*/
+html {
+    background: black;
+    width:100%;
+}
+body{
+  margin:0px;
+}
+
+*{
+  box-sizing: border-box;
+}
+/*Header CSS*/
+header{
+  position: sticky;
+  top:0vh;
+  width:100%;
+  background: black;
+  border-top: 1vh solid black;
+  border-bottom: 1vh solid #2050A0;
+  z-index:1;
+}
+
+#Titre{
+  position:relative;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  font-size:2vmax;
+  font-family: "MyriadPro";
+  color: #fff;
+  text-align: justify;
+  text-align: center;
+  outline: 0.5vw solid white;
+  max-width: 60%;
+  left: 20%;
+}
+/*Les conteneurs pc*/
+.sections_pc {
+  display:block;
+  position: relative;
+}
+
+.main_content {
+  background-color: rgb(0, 0, 0);
+  outline: 1vw solid white;
+  position: relative;
+  width: 90%;
+  max-height: 60vmax;
+  min-height:50vmax;
+  left: 5%;
+  top: 2vmax;
+  margin-bottom: 3vmax;
+  z-index: 0;
+  overflow: hidden;
+}
+/*Les conteneurs mobiles*/
+.sections_mobile{
+  display:none;
+}
+
+.main_content_mobile {
+  background-color: rgb(0, 0, 0);
+  outline: 1vw solid white;
+  position: relative;
+  width: 100%;
+  top: 2vmax;
+  z-index: 0;
+  overflow: auto;
+  display:block;
+  background-color: #050415;
+  margin:1vmax;
+  left:0;
+}
+
+/* Menu Déroulant */
+#menu_logo{
+  padding: 1vh;
+  max-width:3vmax;
+  max-height:3vmax;
+  height:auto;
+}
+
+.dropbtn {
+  position: relative;
+  background-color: #1850A0;
+  color: white;
+  margin-top: 1vmin;
+  margin-bottom: 1vmin;
+  margin-left: 1vw;
+  font-size: 2vmax;
+  border: none;
+  border-radius: 2vh;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  line-height: 1.5em;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #3085C1;
+}
+
+.dropdown {
+  position: absolute;
+  top:3vh;
+  padding-top: 1vh;
+  padding-left: 1vw;
+  display: inline-block;
+
+}
+
+.dropdown-content {
+  display: none;
+  margin-left: 1vw;
+  position: absolute;
+  background-color: #EFEFEF;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  position: relative;
+  color: black;
+  padding: 1vw 1vh;
+  max-width: 8vmax;
+  font-size: 1vw;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  border: 1px solid #2050A0;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  justify-content: space-around;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+/* Cadre Image avec overlay */
+.overlay-image{
+ position: absolute;
+ max-width: 100%;
+ min-height:100%;
+}
+/* Image originale */
+.overlay-image .image {
+ max-width: 100%;
+ display:block;
+ object-fit: contain;
+}
+
+/* Texte original */
+.overlay-image .text {
+ color: #fff;
+ position: absolute;
+ background-color: rgba(0,0,0,0.6);
+ font-size: 10vmin;
+ line-height: 1em;
+ text-shadow: 2vw 2vw 2vw #000;
+ text-align: center;
+ top: 50%;
+ bottom: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ width: 100%;
+ height: 50%;
+}
+/********* Hover image et texte *******/
+/* Overlay */
+.overlay-image .hover {
+ max-height: 50%;
+ width: 100%;
+ opacity: 0;
+ transition: .5s ease;
+ display: block;
+}
+/* Apparition overlay sur passage souris */
+.overlay-image:hover .hover {
+ opacity: 1;
+}
+
+/*Rubriques*/
+
+.conteneur_class{
+  display: flex;
+  width:100%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sous_conteneur{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.content_text{
+  margin-left:2vmin;
+  text-align: left;
+}
+/*Rubrique A propos*/
+.img_activite{
+  margin:3vmax;
+  height:20vmax;
+}
+
+#lien_radio{
+  display:none;
+}
+.player_radio{
+  max-height:20vh;
+  width:50%;
+  border:none;
+}
+/*Rubrique Contact*/
+#logo_facebook{
+  width:4vw;
+}
+
+#logo_facebook_mob{
+  width:3vw;
+}
+
+/*Marque de fin de page déroulante (scrollable)*/
+footer{
+  background-color:#2050A0;
+  height:5vmin;
+  width:100%;
+  bottom:0;
+  margin-top: 1vmax;
+  font-size:2vmax;
+  justify-content: space-around;
+  text-align: center;
+}
+
+/*CSS pour Tablettes et appareils plus petits*/
+@media screen and (max-width: 768px){
+  .overlay-image .hover {
+    opacity:1;
+  }
+
+  .content_text{
+    margin-left: 1vmin;
+    font-size: 1.2vmax;
+  }
+
+  #player_radio{
+    align-self: center;
+  }
+}
+
+/*CSS pour téléphones*/
+@media screen and (max-width: 426px){
+  .overlay-image{
+   display:flex;
+   flex-direction: column-reverse;
+   position: absolute;
+  }
+  .overlay-image .image{
+    display:flex;
+    position:relative;
+  }
+  .overlay-image .hover{
+    display:flex;
+    position:relative;
+  }
+  .overlay-image .text {
+  transform: translate (0%,0%)
+   top:0;
+   bottom: 100%;
+  }
+
+  .dropbtn{
+    display:none;
+  }
+  #errata{
+    font-size:3vmin;
+    text-align:center;
+  }
+  .Mobile_title{
+    text-align: center;
+  }
+
+  .Front.faded{
+    opacity:0;
+    display: none;
+  }
+  .Front{
+    display:block;
+    transition: 0.5s ease;
+  }
+
+  .minia{
+    max-width:100%;
+  }
+
+  #minia_contact{
+    max-width:80%;
+    margin:10%;
+  }
+  body{
+    height:100%;
+  }
+  .sections_mobile{
+    display:flex;
+    flex-wrap:wrap;
+    align-items: center;
+    width:100%;
+    color: white;
+  }
+  .text_desc{
+    margin:2vmax;
+  }
+  #player_radio_mob{
+    width:100%;
+  }
+  .text_desc video{
+    width:100%;
+    z-index:3;
+  }
+  .lien{
+    width:100%;
+  }
+  #contact_text_mob{
+    text-align: center;
+  }
+}
+
+/*CSS pour téléphone Medium/Slim*/
+@media screen and (max-width: 375px){
+  body{
+    height:100%;
+  }
+}
+/*CSS pour téléphone Slim*/
+@media screen and (max-width: 320px){
+  footer{
+    height:6.7vh;
+  }
+}
+/*CSS pour téléphone Medium/Large*/
+@media screen and (max-width: 425px) and (min-width:321px){
+  footer{
+    display:none;
+  }
+}
+
+/*CSS corréctif pour player video sur tuile rotative (controles bien visible)*/
+@media screen and (min-width: 1000px){
+   #court{
+   min-height:48vmax;
+ }
+}
+
+/*CSS responsive pour certains média (photos, player, etc ...)*/
+@media screen and (max-width: 1330px){
+ #qui{
+   max-height:80vmax;
+ }
+}
+
+@media screen and (max-width: 780px){
+ #qui{
+   max-height:100vmax;
+ }
+}
+
+/*
+  CSS pour IE versions 10, 11 et Edge, qu'on aime tant
+*/
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+   header{
+     height:auto;
+     min-height:20vmin;
+     position: fixed;
+   }
+
+   #menu_logo{
+     max-height:6vmin;
+   }
+
+   .overlay-image{
+     display:none;
+   }
+
+   .sections_pc{
+     margin-top:28vmin;
+   }
+
+   .main_content{
+     margin-top: 6vmin;
+   }
+
+   #Titre{
+     height:auto;
+     font-size:4vmin;
+   }
+   .dropdown{
+     max-width:20vmin;
+   }
+   .dropbtn{
+     font-size:1vmax;
+   }
+   .img_activite{
+     max-width:30vw;
+   }
+   .content_text{
+     font-size:3vw;
+   }
+   .text_desc{
+     font-size:3vw;
+   }
+}

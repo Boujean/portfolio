@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <title>Jean PUIGRENIER - Portfolio</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="./css/index0.css">
+    <link rel="stylesheet" href="./css/flip.css">
+  </head>
+  <body>
+    <script type="text/javascript" src="./scripts/menu.js"></script>
+    <!--script type="text/javascript" src="./index_files/scroll.js"></script-->
+    <script type="text/javascript" src="./scripts/flip.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <header>
+      <div id="header">
+        <div class="dropdown">
+          <button onclick="myFunction()" class="dropbtn">
+            <img src="./photos/menu.png" id="menu_logo" alt=""> Menu
+          </button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="#Experience">Parcours</a>
+            <a href="#qui">Qui suis je ?</a>
+            <a href="#court">Court Métrage</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+        <div id="Titre">
+              <p > JEAN PUIGRENIER <br> <br> Ingénieur spécialisé en management de projet digitaux et média </p>
+        </div>
+      </div>
+    </header>
+    <div class="sections_pc">
+      <section>
+        <div class="main_content" id="Experience">
+          <div class="flip" onclick="flip_Exp()">
+            <div class="card" id="card_Exp">
+                <div class="face front Front" id="back_Exp" >
+                  <div class="overlay-image" >
+                    <picture>
+                        <source media="(max-width: 425px)" srcset="./photos/PP.jpg">
+                        <source media="(min-width: 426px)" srcset="./photos/Jean42.jpg">
+                        <img class="image" src="./photos/Jean42.jpg" alt="" />
+                    </picture>
+                    <div class="hover">
+                      <div class="text">Expérience Professionnelle</div>
+                      </div>
+                  </div>
+                </div>
+                <div class="face back Front" id="back_Exp">
+                  <div class="conteneur_class">
+                    <div class="text_desc">
+                      <h1> Juin 2016 - Août 2016 : </h1>
+                      <p>Assistant du gestionnaire du parc informatique au sein de MeilleursAgents.com</p>
+                      <h1>Octobre 2017 - Aout 2018 </h1>
+                      <p>Algorithmique de calculs et de traitement d'image (Mathlab, Python) <br> dans le cadre d'analyse microscopique de culture bactérienne contaminée par un virus <br> sous la tutelle d'un enseignant chercheur de Télécom SudParis </p>
+                      <h1> Janvier 2018 - Aout 2018: </h1>
+                      <p>Développement Application Mobile d'improvisation à la guitare,<br> compatible iOS et Android sous le framework ReactNative </p>
+                      <a href="http://pierre-peyches.fr/Media/Php/Jean/index_files/cv_jean_puigrenier.pdf">Cliquez ici pour télécharger mon CV</a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="main_content" id="qui">
+          <div class="flip" onclick="flip_qui()">
+            <div class="card" id="card_qui">
+                <div class="face front Front" id="front_qui" >
+                  <div class="overlay-image">
+                    <picture>
+                        <source media="(max-width: 425px)" srcset="./photos/radio.jpg">
+                        <source media="(min-width: 426px)" srcset="./photos/IMG_1094.jpg">
+                          <img class="image" src="./photos/IMG_1094.jpg" alt="" />
+                    </picture>
+                    <div class="hover">
+                      <div class="text">Mes Activités</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="face back Front" id="back_qui">
+                  <div class="conteneur_class">
+                    <div class="sous_conteneur" id="Radio">
+                      <div>
+                        <img src="./photos/radio.jpg" class="img_activite" alt="">
+                      </div>
+                      <div class="content_text">
+                        <h1>Animateur Radio</h1>
+                        <p> Création d'une émission hebdomadaire de découverte musicale <br>
+                        réalisée au sein des radios étudiantes EvryOne et Radio Campus Lorraine.<br>
+                        Rédacteur et Animateur au sein de l'émission.</p>
+                        <p>Création et gestion des réseaux sociaux associés <br> (Facebook, Twitter et Soundcloud/MixCloud).</p>
+                        <p>Replay d'une émission :</p>
+                        <iframe class="player_radio" id="player_radio" src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&mini=1&feed=%2Fradiocampuslorraine%2Fsupersonic-l%C3%A9mission-16-01-04-2016-sur-alex-gopher%2F"></iframe>
+                        <a id="lien_radio" href="https://www.mixcloud.com/radiocampuslorraine/supersonic-l%C3%A9mission-16-01-04-2016-sur-alex-gopher/">Lien vers un replay d'émission</a>
+                      </div>
+                    </div>
+                    <div class="sous_conteneur" id="Cinema">
+                      <div class="content_text">
+                        <h1>Cinéma</h1>
+                        <p>Aide à la réalisation de courts métrages.</p>
+                        <p>Études: cours d'acting, cours d'analyse des médias et de longs métrages <br> (un semetre de sciences humaines en anglais pour chacune des disciplines)</p>
+                        <p> Chef Opérateur et Directeur de Photographie sur un court métrage, <br> réalisé en un mois dans le cadre de mes études : </p>
+                        <a href="#court">Cliquer pour aller au court métrage présent plus bas</a>
+                      </div>
+                      <div>
+                        <img src="./photos/PP.jpg" class="img_activite" alt="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="main_content" id="court">
+          <div class="flip" onclick="flip_court()">
+            <div class="card" id="card_court">
+                <div class="face front Front" id="front_court" >
+                  <div class="overlay-image">
+                    <img class="image" src="./photos/IMG_1057.jpg" alt="" />
+                    <div class="hover">
+                      <div class="text">Court Métrage</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="face back Front" id="back_court">
+                    <video src="http://pierre-peyches.fr/Media/Jean/video/LE_PASSAGE.mp4" controls></video>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="main_content" id="contact">
+          <div class="flip" onclick="flip_contact()">
+            <div class="card" id="card_contact">
+                <div class="face front Front" id="front_contact" >
+                  <div class="overlay-image" >
+                    <picture>
+                        <source media="(max-width: 425px)" srcset="./photos/radio.jpg">
+                        <source media="(min-width: 426px)" srcset="././photos/Jean.jpg">
+                        <img class="image" src="./photos/Jean.jpg" alt="" />
+                      </picture>
+                    <div class="normal"></div>
+                    <div class="hover">
+                      <div class="text">Contact</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="face back Front" id="back_contact">
+                  <div class="conteneur_class">
+                    <div class="text_desc" id="contact_text">
+                      <h1> Contact</h1>
+                      <h3>Adresse Mail</h3>
+                      <p>jean.puigrenier@telecom-sudparis.eu</p>
+                      <h3>LinkedIn</h3>
+                      <a href="https://www.linkedin.com/in/jean-puigrenier/">Lien LinkedIn</a>
+                      <h3>Réseaux Sociaux</h3>
+                      <a href="https://www.facebook.com/jean.puigrenier"><img id="logo_facebook" src="./photos/fb_icon.png" alt="">Facebook</a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <p>Jean Puigrenier 2018|2019</p>
+    </footer>
+  </body>
+</html>
